@@ -19,7 +19,7 @@ footer{
     bottom: 0;
     left: 0;
     height: 50px;
-    width:0;
+    width:100%;
     background: green;
     color: white;
 }

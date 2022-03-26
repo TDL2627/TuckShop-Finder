@@ -10,6 +10,8 @@ export default {
 }
 </script>
 
-<style>
-
+<style scoped>
+#landing{
+  padding-top: 15%;
+}
 </style>
