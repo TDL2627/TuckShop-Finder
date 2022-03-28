@@ -1,6 +1,6 @@
 <template>
 <Nav/>
-  <router-view/>
+<router-view/>
   <Footer/>
 </template>
 
@@ -14,12 +14,22 @@ components:{
 }
 </script>
 <style>
+body{
+  padding: 0;
+  margin: 0;
+}
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color: whitesmoke;
+  height: 100vh !important;
+width: 100% !important;
+overflow: none !important;
+  margin: 0 !important;
+  background: black;
+
 }
 
 

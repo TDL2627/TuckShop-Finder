@@ -20,7 +20,7 @@ footer{
     left: 0;
     height: 50px;
     width:100%;
-    background: green;
+    background: red;
     color: white;
 }
 </style>

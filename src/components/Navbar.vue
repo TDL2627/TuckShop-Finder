@@ -1,7 +1,7 @@
 <template>
     <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+    <router-link to="/">HOME</router-link> |
+    <router-link to="/area">AREA</router-link>
   </div>
 </template>
 
@@ -14,7 +14,7 @@ export default {
 <style scoped>
 #nav {
   padding: 30px;
-  background: green;
+  background: red;  
   position: fixed;
   width: 100%;
   top: 0;
@@ -23,7 +23,7 @@ export default {
 
 #nav a {
   font-weight: bold;
-  color: #2c3e50;
+  color: white;
 }
 
 #nav a.router-link-exact-active {
