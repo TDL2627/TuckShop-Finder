@@ -24,7 +24,7 @@ body{
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: whitesmoke;
-  height: 100vh !important;
+ 
 width: 100% !important;
 overflow: none !important;
   margin: 0 !important;
