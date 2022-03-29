@@ -14,12 +14,36 @@
     </div>
 </div>
 
+ <div class="container">
+   <div class="row">
+  <div class="col-lg-5  shop"  v-for="shop in shops" :key="shop.name">
+    <h3 class="name">{{shop.name}}</h3>
+   <p>{{shop.time}}</p>
+<div v-html="shop.location"></div>
+<img :src="require('@/assets/shops/'+ shop.pic)" alt="">
+  </div>
+
+   </div>
+ </div>
+
   </div>
 </template>
 
 <script>
 export default {
-
+data(){
+  return{
+    shops:[]
+  }
+},
+async created () {
+    try {
+      const res = await fetch('https://tuckshop2627.herokuapp.com/shops')
+      this.shops = await res.json()
+    } catch (error) {
+      console.log(error)
+    }
+  }
 }
 </script>
 
