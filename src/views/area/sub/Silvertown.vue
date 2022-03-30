@@ -2,6 +2,10 @@
   <div class="sub-area">
 <h1>This is Silver Town</h1>
 
+<div v-if="loading">
+<span class="loader"></span>
+</div>
+
 
 
  <div class="container">
@@ -11,8 +15,7 @@
    <p>{{shop.time}}</p>
 <div class="map" v-html="shop.location"></div>
 <img class="pic" :src="require('@/assets/shops/'+ shop.pic)" alt="shop pic">
-  </div>
-
+ </div>
    </div>
  </div>
 
@@ -23,15 +26,19 @@
 export default {
 data(){
   return{
-    shops:[]
+    shops:[],
+    loading:false
   }
 },
 async created () {
+      this.loading = true
     try {
       const res = await fetch('https://tuckshop2627.herokuapp.com/shops')
       this.shops = await res.json()
+          this.loading = false
     } catch (error) {
       console.log(error)
+        this.loading = false
     }
   }
 }
